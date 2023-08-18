@@ -7,6 +7,10 @@ import Foo from './Foo.vue'
 function receiveEmit() {
   alert('Hello World!');
 }
+
+function add(event, num) {
+  alert('add ' + event + ' ' + num);
+}
 </script>
 
 <template>
@@ -21,7 +25,7 @@ function receiveEmit() {
       <!--        <RouterLink to="/about">About</RouterLink>-->
       <!--      </nav>-->
 
-      <Foo @toggle-favorite="receiveEmit"/>
+      <Foo @toggle-favorite="receiveEmit" @add="add"/>
 
     </div>
   </header>

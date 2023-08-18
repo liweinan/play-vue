@@ -3,7 +3,7 @@
   <h2 class="heading">I am {{ reverseMessage(message) }}</h2>
   <p><input v-model="message" type="text" placeholder="Enter your message"/></p>
   <p>
-    <button @click="$emit('add', Math.random())">
+    <button @click="$emit('add', $event, Math.random())">
       Add Math.random()
     </button>
   </p>
