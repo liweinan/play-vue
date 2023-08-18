@@ -12,7 +12,6 @@
   </p>
 </template>
 <script lang="ts">
-
 export default {
   name: 'Foo',
   data() {

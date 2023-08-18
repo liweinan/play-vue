@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import {RouterLink, RouterView} from 'vue-router'
 import Foo from './Foo.vue'
+import Comp from './Comp.vue'
+
 // https://www.w3schools.com/vue/showvue.php?filename=demo_emit_3
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -26,7 +28,7 @@ function add(event, num) {
       <!--      </nav>-->
 
       <Foo @toggle-favorite="receiveEmit" @add="add"/>
-
+      <Comp/>
     </div>
   </header>
 
