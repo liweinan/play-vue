@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'MyComputedComp',
+  name: 'Foo',
   data() {
     return {
       message: 'Hello Vue!'

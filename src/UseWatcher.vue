@@ -8,7 +8,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: 'MyWatcherComp',
+  name: 'Foo',
   data() {
     return {
       watcherMessage: 'Hello Vue!',
