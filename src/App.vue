@@ -3,6 +3,7 @@ import {RouterLink, RouterView} from 'vue-router'
 import Foo from './Foo.vue'
 import Comp from './Comp.vue'
 import Watcher from './UseWatcher.vue'
+import Computed from './UseComputed.vue'
 
 // https://www.w3schools.com/vue/showvue.php?filename=demo_emit_3
 // import HelloWorld from './components/HelloWorld.vue'
@@ -31,6 +32,8 @@ function add(event, num) {
       <Foo @toggle-favorite="receiveEmit" @add="add"/>
       <Comp/>
       <Watcher/>
+      <Computed/>
+
     </div>
   </header>
 
