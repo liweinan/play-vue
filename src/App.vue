@@ -15,6 +15,11 @@ function receiveEmit() {
 function add(event, num) {
   alert('add ' + event + ' ' + num);
 }
+
+
+// get a component by name
+console.log('watcher : ' + JSON.stringify(Watcher));
+console.log('computed : ' + JSON.stringify(Computed));
 </script>
 
 <template>
