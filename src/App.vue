@@ -4,7 +4,7 @@ import Foo from './Foo.vue'
 import Comp from './Comp.vue'
 import Watcher from './UseWatcher.vue'
 import Computed from './UseComputed.vue'
-
+import Setup from './UseSetup.vue'
 // https://www.w3schools.com/vue/showvue.php?filename=demo_emit_3
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -38,7 +38,7 @@ console.log('computed : ' + JSON.stringify(Computed));
       <Comp/>
       <Watcher/>
       <Computed/>
-
+      <Setup/>
     </div>
   </header>
 
