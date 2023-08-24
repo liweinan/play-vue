@@ -10,8 +10,26 @@
   <p>
     <button @click="toggleFavorite">Favorite</button>
   </p>
+  <p>
+    <StepOne/>
+  </p>
 </template>
 <script lang="ts">
+
+const StepOne = {
+  template: `
+    <div>
+      <label for="name">Step one's input</label>
+      <input v-model="name" id="name"/>
+    </div>
+  `,
+  data() {
+    return {
+      name: "",
+    }
+  },
+}
+
 export default {
   name: 'Foo',
   data() {
@@ -27,6 +45,7 @@ export default {
       this.$emit('toggle-favorite');
     }
   },
+  components: {StepOne},
 };
 </script>
 <style>
