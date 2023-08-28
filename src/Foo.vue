@@ -11,8 +11,8 @@
     <button @click="toggleFavorite">Favorite</button>
   </p>
   <p>
-<!--    <StepOne/>-->
-    <component :is="StepOne"></component>
+    <StepOne/>
+    <!--    <component :is="StepOne"></component>-->
 
   </p>
 </template>
@@ -36,16 +36,17 @@ import StepOne from "@/StepOne.vue";
 
 export default {
   name: 'Foo',
-  computed: {
-    StepOne() {
-      return StepOne
-    }
-  },
+  // computed: {
+  //   StepOne() {
+  //     return StepOne
+  //   }
+  // },
   data() {
     return {
       message: '',
     };
   },
+  components: {StepOne},
   methods: {
     reverseMessage(message: string): string {
       return message.split('').reverse().join('')
