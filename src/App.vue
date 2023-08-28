@@ -20,6 +20,8 @@ function add(event, num) {
 // get a component by name
 console.log('watcher : ' + JSON.stringify(Watcher));
 console.log('computed : ' + JSON.stringify(Computed));
+
+
 </script>
 
 <template>
