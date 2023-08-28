@@ -11,27 +11,36 @@
     <button @click="toggleFavorite">Favorite</button>
   </p>
   <p>
-    <StepOne/>
+<!--    <StepOne/>-->
+    <component :is="StepOne"></component>
+
   </p>
 </template>
 <script lang="ts">
+import StepOne from "@/StepOne.vue";
 
-const StepOne = {
-  template: `
-    <div>
-      <label for="name">Step one's input</label>
-      <input v-model="name" id="name"/>
-    </div>
-  `,
-  data() {
-    return {
-      name: "",
-    }
-  },
-}
+//
+//const StepOne = {
+//  template: `
+//    <div>
+//      <label for="name">Step one's input</label>
+//      <input v-model="name" id="name"/>
+//    </div>
+//  `,
+//  data() {
+//    return {
+//      name: "",
+//    }
+//  },
+//}
 
 export default {
   name: 'Foo',
+  computed: {
+    StepOne() {
+      return StepOne
+    }
+  },
   data() {
     return {
       message: '',
@@ -45,7 +54,6 @@ export default {
       this.$emit('toggle-favorite');
     }
   },
-  components: {StepOne},
 };
 </script>
 <style>
