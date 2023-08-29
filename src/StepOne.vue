@@ -12,6 +12,7 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
 
+// https://vuejs.org/guide/scaling-up/tooling.html#note-on-in-browser-template-compilation
 export const StepTwo = {
   template: `
     <div>
@@ -21,7 +22,7 @@ export const StepTwo = {
   `,
   data() {
     return {
-      name: "",
+      name: "Hello, Step2!",
     }
   },
 }
