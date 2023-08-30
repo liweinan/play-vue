@@ -5,13 +5,27 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+// import { defineComponent } from 'vue'
 
-export default defineComponent({
+// export default defineComponent({
+//   name: 'Foo',
+//   data() {
+//     return {
+//       message: 'Hello Vue!'
+//     }
+//   },
+//   computed: {
+//     reversedMessage() {
+//       return this.message.split('').reverse().join('')
+//     }
+//   }
+// })
+
+export default {
   name: 'Foo',
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'Hello Computed!'
     }
   },
   computed: {
@@ -19,6 +33,6 @@ export default defineComponent({
       return this.message.split('').reverse().join('')
     }
   }
-})
+}
 
 </script>
