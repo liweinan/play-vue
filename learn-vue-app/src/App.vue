@@ -59,7 +59,11 @@
 
 // Composition VS Options
 // import Options from "@/components/Options.vue";
-import Composition from "@/components/Composition.vue";
+// import Composition from "@/components/Composition.vue";
+
+// import MyComposable from "@/components/MyComposable.vue";
+
+import GitHubRepos from "@/components/GitHubRepos.vue";
 
 </script>
 
@@ -85,6 +89,10 @@ import Composition from "@/components/Composition.vue";
 
 <!--  Composition VS Options-->
 <!--    <Options />-->
-    <Composition />
+<!--    <Composition />-->
+
+<!--  <MyComposable />-->
+
+  <GitHubRepos  />
 
 </template>
