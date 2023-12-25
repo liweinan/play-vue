@@ -1,68 +1,26 @@
 <template>
-  <div v-if="loading">Loading...</div>
-  <div class="user-profile" v-if="user">
-    <img :src="user.avatar_url" alt="`${user.name} Avatar`" width="200"  />
-    <div>
-      <h1>{{ user.name }}</h1>
-      <p>{{ user.bio }}</p>
-      <p>Twitter: {{ user.twitter_username }}</p>
-      <p>Blog: {{ user.blog }}</p>
-    </div>
-  </div>
-  <div class="error" v-else-if="error">
-    {{ error.message }}
-  </div>
+  <FetchComponent url="https://api.github.com/users/xiaolitongxue666">
+<!--    在Vue中，使用<template>标签和v-slot指令可以定义默认插槽。#default是默认插槽的名称，-->
+<!--    它允许您在父组件中传递内容到子组件的默认插槽中。-->
+<!--    这样，子组件就可以在适当的位置渲染父组件传递的内容-->
+    <template #default="defaultProps">
+      <div class="user-profile">
+        <img
+            :src="(defaultProps.data as User).avatar_url"
+            alt="`${defaultProps.data.name} Avatar`"
+            width="200"
+        />
+        <div>
+          <h1>{{ (defaultProps.data as User).name }}</h1>
+          <p>{{ (defaultProps.data as User).bio }}</p>
+          <p>Twitter: {{(defaultProps.data as User).twitter_username }}</p>
+          <p>Blog: {{ (defaultProps.data as User).blog }}</p>
+        </div>
+      </div>
+    </template>
+  </FetchComponent>
 </template>
-
 <script lang="ts" setup>
-import axios from 'axios';
-import { ref, onBeforeMount, onMounted, onUpdated } from 'vue';
-
-type User = {
-  name: string;
-  bio: string;
-  avatar_url: string;
-  twitter_username: string;
-  blog: string;
-  //...
-};
-
-
-const user = ref<User | null>(null)
-const error = ref<Error | null>(null)
-
-const loading = ref<boolean>(false);
-async function getUser () {
-  loading.value = true;
-
-  try {
-    const response = await axios.get<User>(
-        "https://api.github.com/users/xiaolitongxue666"
-    )
-
-    user.value = await response.data
-
-    console.log('User', user.value.name)
-
-  } catch (err) {
-    error.value = err as Error
-  } finally {
-    loading.value = false;
-  }
-}
-
-onBeforeMount(async () => {
-  console.log('created')
-  getUser();
-})
-
-onMounted(() => {
-  console.log("mounted");
-});
-
-onUpdated(() => {
-  console.log("updated");
-})
-
-// getUser();
+import FetchComponent from "./FetchComponent.vue";
+import type { User } from "../types/User.type";
 </script>
