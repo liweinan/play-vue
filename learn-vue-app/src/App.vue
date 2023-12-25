@@ -63,7 +63,9 @@
 
 // import MyComposable from "@/components/MyComposable.vue";
 
-import GitHubRepos from "@/components/GitHubRepos.vue";
+// import GitHubRepos from "@/components/GitHubRepos.vue";
+
+import UserProfile from "@/components/UserProfile.vue";
 
 </script>
 
@@ -93,6 +95,8 @@ import GitHubRepos from "@/components/GitHubRepos.vue";
 
 <!--  <MyComposable />-->
 
-  <GitHubRepos  />
+<!--  <GitHubRepos  />-->
+
+  <UserProfile />
 
 </template>
