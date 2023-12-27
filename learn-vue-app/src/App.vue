@@ -65,7 +65,9 @@
 
 // import GitHubRepos from "@/components/GitHubRepos.vue";
 
-import UserProfile from "@/components/UserProfile.vue";
+// import UserProfile from "@/components/UserProfile.vue";
+
+import HFunctionComponent from "@/components/HFunctionComponent.vue";
 
 </script>
 
@@ -97,6 +99,8 @@ import UserProfile from "@/components/UserProfile.vue";
 
 <!--  <GitHubRepos  />-->
 
-  <UserProfile />
+<!--  <UserProfile />-->
+
+  <HFunctionComponent />
 
 </template>
