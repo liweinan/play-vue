@@ -13,7 +13,7 @@
 import { type PropType, defineProps, defineEmits } from 'vue'
 
 // 定义组件的属性接口
-export interface Task {
+export interface Task2 {
   id: number;
   title: string;
   completed: boolean;
@@ -22,7 +22,7 @@ export interface Task {
 // 使用 defineProps 函数定义组件的属性
 const props = defineProps({
   task: {
-    type: Object as PropType<Task>,
+    type: Object as PropType<Task2>,
     required: true,
   }
 });
