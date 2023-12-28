@@ -67,7 +67,9 @@
 
 // import UserProfile from "@/components/UserProfile.vue";
 
-import HFunctionComponent from "@/components/HFunctionComponent.vue";
+// import HFunctionComponent from "@/components/HFunctionComponent.vue";
+
+import TodoList2 from "./components/TodoList2.vue";
 
 </script>
 
@@ -101,6 +103,8 @@ import HFunctionComponent from "@/components/HFunctionComponent.vue";
 
 <!--  <UserProfile />-->
 
-  <HFunctionComponent />
+<!--  <HFunctionComponent />-->
+
+  <TodoList2 />
 
 </template>
