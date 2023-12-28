@@ -1,27 +1,39 @@
-<script setup>
+<script lang="jsx" setup>
 
-import { h } from 'vue'
+// /* h v-node */
+// import { h } from 'vue'
+//
+// const inputElem = h(
+//     'input',
+//     {
+//       placeholder: 'Enter some text',
+//       type: 'text',
+//       id: 'text-input'
+//     })
+//
+// const comp = h(
+//     'div',
+//     {
+//       id: 'my-test-comp',
+//       style: { border: '1px solid blue' }
+//     },
+//     inputElem
+//     )
 
-const inputElem = h(
-    'input',
-    {
-      placeholder: 'Enter some text',
-      type: 'text',
-      id: 'text-input'
-    })
+/* JSX */
+// import { jsx } from 'vue'
 
-const comp = h(
-    'div',
-    {
-      id: 'my-test-comp',
-      style: { border: '1px solid blue' }
-    },
-    inputElem
-    )
+const name = "JSX";
+
+const id = "jsx-comp"
+
+let JSXComp = <div id={id}>This is a {name} component</div>;
 
 const MyRender = {
   render() {
-    return comp
+    // return comp
+    return JSXComp
+
   }
 }
 </script>
