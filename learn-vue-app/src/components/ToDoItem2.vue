@@ -35,42 +35,4 @@ const onTaskCompleted = (event: Event) => {
     completed: (event.target as HTMLInputElement)?.checked,
   });
 }
-
-// export default defineComponent({
-//   name: 'ToDoItem',
-//   props: {
-//     task: {
-//       type: Object as PropType<Task>,
-//       required: true,
-//     }
-//   },
-//   emits: ['task-completed-toggle'],
-//   methods: {
-//     onTaskCompleted(event: Event) {
-//       this.$emit("task-completed-toggle", {
-//         ...this.task,
-//         completed: (event.target as HTMLInputElement)?.checked,
-//       });
-//     },
-//   }
-// })
-
-// export default defineComponent({
-//   name: 'ToDoItem',
-//   props: {
-//     task: {
-//       type: Object as PropType<Task>,
-//       required: true,
-//     }
-//   },
-//   emits: ['task-completed-toggle'],
-//   methods: {
-//     onTaskCompleted(event: Event) {
-//       this.$emit("task-completed-toggle", {
-//         ...this.task,
-//         completed: (event.target as HTMLInputElement)?.checked,
-//       });
-//     },
-//   }
-// })
 </script>
