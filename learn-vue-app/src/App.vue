@@ -73,8 +73,11 @@
 
 // import UseMyHeading from "@/components/UseMyHeading.vue";
 
-import UseHelloVue from "@/components/UseHelloVue.vue";
+// import UseHelloVue from "@/components/UseHelloVue.vue";
 
+// import HelloVue from "@/components/HelloVue.vue";
+
+import KeepAlive2 from "@/components/KeepAlive2.vue";
 
 </script>
 
@@ -114,6 +117,10 @@ import UseHelloVue from "@/components/UseHelloVue.vue";
 
 <!--  <UseMyHeading />-->
 
-  <UseHelloVue />
+<!--  <UseHelloVue />-->
+
+<!--  <HelloVue />-->
+
+  <KeepAlive2 />
 
 </template>
