@@ -71,7 +71,10 @@
 
 // import TodoList2 from "./components/TodoList2.vue";
 
-import UseMyHeading from "@/components/UseMyHeading.vue";
+// import UseMyHeading from "@/components/UseMyHeading.vue";
+
+import UseHelloVue from "@/components/UseHelloVue.vue";
+
 
 </script>
 
@@ -109,6 +112,8 @@ import UseMyHeading from "@/components/UseMyHeading.vue";
 
 <!--  <TodoList2 />-->
 
-  <UseMyHeading />
+<!--  <UseMyHeading />-->
+
+  <UseHelloVue />
 
 </template>

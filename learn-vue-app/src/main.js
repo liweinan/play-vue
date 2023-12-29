@@ -1,32 +1,32 @@
 // import './assets/main.css'
 
-/* Register and use plugin */
-import { createApp, defineComponent } from 'vue/dist/vue.esm-bundler.js'
-import truncate from './plugins/truncate'
-
-const App = defineComponent({
-    template: `
- <h1>{{ $truncate('My truncated long text') }}</h1>
- <h2>{{ truncatedText }}</h2>
- `,
-    data() {
-        return {
-            truncatedText: this.$truncate('My 2nd truncated text')
-        }
-    }
-});
-
-
-//1. Create the app instance
-const app = createApp(App);
-//2. Register the plugin
-app.use(truncate, { limit: 10 })
-app.mount('#app')
-/* end */
-
-
-// import { createApp } from 'vue'
-// import App from './App.vue'
+// /* Register and use plugin */
+// import { createApp, defineComponent } from 'vue/dist/vue.esm-bundler.js'
+// import truncate from './plugins/truncate'
 //
-// const app = createApp(App)
+// const App = defineComponent({
+//     template: `
+//  <h1>{{ $truncate('My truncated long text') }}</h1>
+//  <h2>{{ truncatedText }}</h2>
+//  `,
+//     data() {
+//         return {
+//             truncatedText: this.$truncate('My 2nd truncated text')
+//         }
+//     }
+// });
+//
+//
+// //1. Create the app instance
+// const app = createApp(App);
+// //2. Register the plugin
+// app.use(truncate, { limit: 10 })
 // app.mount('#app')
+// /* end */
+
+
+import { createApp } from 'vue'
+import App from './App.vue'
+
+const app = createApp(App)
+app.mount('#app')
