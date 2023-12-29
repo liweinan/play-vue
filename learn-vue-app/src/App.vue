@@ -69,7 +69,9 @@
 
 // import HFunctionComponent from "@/components/HFunctionComponent.vue";
 
-import TodoList2 from "./components/TodoList2.vue";
+// import TodoList2 from "./components/TodoList2.vue";
+
+import UseMyHeading from "@/components/UseMyHeading.vue";
 
 </script>
 
@@ -105,6 +107,8 @@ import TodoList2 from "./components/TodoList2.vue";
 
 <!--  <HFunctionComponent />-->
 
-  <TodoList2 />
+<!--  <TodoList2 />-->
+
+  <UseMyHeading />
 
 </template>
