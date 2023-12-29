@@ -1,12 +1,10 @@
 <template>
-  <component is="HelloVue" />
+  <component :is="HelloVue" />
 </template>
 
-<script lang="ts">
-  import HelloVue from "@/components/HelloVue.vue";
-  import { defineComponent } from "vue";
+<script lang="ts" setup>
+  // import HelloVue from "@/components/HelloVue.vue";
+  import { defineAsyncComponent } from "vue";
+  const HelloVue = defineAsyncComponent(() => import('./HelloVue.vue'));
 
-  export default defineComponent({
-    components: { HelloVue },
-  });
 </script>
