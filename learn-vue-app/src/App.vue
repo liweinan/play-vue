@@ -47,7 +47,7 @@
 <!--</style>-->
 
 
-<script setup>
+<script setup lang="ts">
 // import ProductItemList   from "./components/ProductItemList.vue";
 // import TodoList from "./components/TodoList.vue";
 // import DiningComponent from "@/components/DiningComponent.vue";
@@ -77,7 +77,10 @@
 
 // import HelloVue from "@/components/HelloVue.vue";
 
-import KeepAlive2 from "@/components/KeepAlive2.vue";
+// import KeepAlive2 from "@/components/KeepAlive2.vue";
+
+import { RouterView } from 'vue-router'
+import NavBar from "@/components/NavBar.vue";
 
 </script>
 
@@ -121,6 +124,10 @@ import KeepAlive2 from "@/components/KeepAlive2.vue";
 
 <!--  <HelloVue />-->
 
-  <KeepAlive2 />
+<!--  <KeepAlive2 />-->
+
+  <NavBar />
+  <RouterView class="view" />
+
 
 </template>
