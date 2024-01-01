@@ -10,6 +10,8 @@ import HomeView  from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import PizzasView from "../views/PizzasView.vue";
 import ContactView from "../views/ContactView.vue";
+import ContactFormView from "../views/ContactFormView.vue";
+import ContactFaqView from "../views/ContactFaqView.vue";
 import LoginView from "../views/LoginView.vue";
 
 const routes:RouteRecordRaw[]  = [
@@ -32,9 +34,26 @@ const routes:RouteRecordRaw[]  = [
         }),
     },
     {
-        path: '/contact',
-        name: 'contact',
-        component: ContactView
+        path: "/contact",
+        name: "contact",
+        component: ContactView,
+        children: [
+            {
+                path: "faq",
+                name: "contact-faq",
+                component: ContactFaqView,
+            },
+            {
+                path: "form",
+                name: "contact-form",
+                component: ContactFormView,
+            },
+            //   {
+            //     path: "",
+            //     name: "contact",
+            //     component: ContactView,
+            //   }
+        ],
     },
     {
         path: '/login',
