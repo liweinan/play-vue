@@ -2,6 +2,7 @@
 import {
     createRouter,
     createWebHistory,
+    type RouteLocationNormalizedLoaded,
     type RouteRecordRaw
 } from 'vue-router';
 
@@ -25,7 +26,10 @@ const routes:RouteRecordRaw[]  = [
     {
         path: '/pizzas',
         name: 'pizzas',
-        component: PizzasView
+        component: PizzasView,
+        props: (route: RouteLocationNormalizedLoaded) => ({
+            searchTerm: route.query?.search || "",
+        }),
     },
     {
         path: '/contact',

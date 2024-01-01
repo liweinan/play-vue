@@ -41,6 +41,7 @@ type PizzaSearch = {
   searchResults: Ref<Pizza[]>;
 };
 
+// 可以在Vue 3模板中直接使用console.log来打印信息
 console.log(`pizzaId: [${pizzaId}]`);
 console.log(`pizzaTitle: [${pizzaTitle}]`);
 console.log(`props.searchTerm: [${pizzas.value.length}]`);
@@ -48,8 +49,8 @@ console.log(`props.searchTerm: [${pizzas.value.length}]`);
 
 const { search, searchResults }: PizzaSearch = useSearch({
   items: pizzas,
-  // defaultSearch: props.searchTerm,
-  defaultSearch: pizzaTitle,
+  defaultSearch: props.searchTerm,
+  // defaultSearch: pizzaTitle,
 });
 
 watch(search, (value, prevValue) => {
