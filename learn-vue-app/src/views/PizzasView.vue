@@ -1,62 +1,23 @@
 <template>
-  <search class="pizzas-view--container">
+  <div class="pizzas-view--container">
     <h1>Pizzas</h1>
-    <p v-if="pizzaId">Pizza ID: {{ pizzaId }}</p>
-    <input type="search" v-model="search" placeholder="Search for a pizza" />
-  </search>
-  <ul>
-    <li v-for="pizza in searchResults" :key="pizza.id">
-      <PizzaCard :pizza="pizza" />
-    </li>
-  </ul>
+    <ul>
+      <li v-for="pizza in pizzasStore.pizzas" :key="pizza.id">
+        <PizzaCard :pizza="pizza" />
+      </li>
+    </ul>
+  </div>
 </template>
+
 <script lang="ts" setup>
-import {
-  useRouter,
-  useRoute
-} from "vue-router";
-import { usePizzas } from "@/composables/usePizzas";
-import PizzaCard from "@/components/PizzaCard.vue";
-import { useSearch } from "@/composables/useSearch";
-import type { Pizza } from "@/types/Pizza";
-import { watch, type Ref } from "vue";
 
-const props = defineProps({
-  searchTerm: {
-    type: String,
-    required: false,
-    default: "",
-  },
-});
+import PizzaCard from "../components/PizzaCard.vue";
+import { usePizzasStore } from "../stores/pizzas";
 
-const route = useRoute();
-const pizzaId = route.query?.id;
-const pizzaTitle = route.query?.search;
-const router = useRouter();
+const pizzasStore = usePizzasStore();
 
-const { pizzas } = usePizzas();
+pizzasStore.fetchPizzas();
 
-type PizzaSearch = {
-  search: Ref<string>;
-  searchResults: Ref<Pizza[]>;
-};
-
-// 可以在Vue 3模板中直接使用console.log来打印信息
-console.log(`pizzaId: [${pizzaId}]`);
-console.log(`pizzaTitle: [${pizzaTitle}]`);
-console.log(`props.searchTerm: [${pizzas.value.length}]`);
-// console.log(`props.searchTerm: [${props.searchTerm}]`);
-
-const { search, searchResults }: PizzaSearch = useSearch({
-  items: pizzas,
-  defaultSearch: props.searchTerm,
-  // defaultSearch: pizzaTitle,
-});
-
-watch(search, (value, prevValue) => {
-  if (value === prevValue) return;
-  router.replace({ query: { search: value } });
-});
 </script>
 
 <style scoped>
