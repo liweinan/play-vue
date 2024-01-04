@@ -79,8 +79,11 @@
 
 // import KeepAlive2 from "@/components/KeepAlive2.vue";
 
-import { RouterView } from 'vue-router'
-import NavBar from "@/components/NavBar.vue";
+// import { RouterView } from 'vue-router'
+// import NavBar from "@/components/NavBar.vue";
+
+import { RouterView } from "vue-router";
+import LHeader from "@/components/LHeader.vue";
 
 </script>
 
@@ -126,8 +129,10 @@ import NavBar from "@/components/NavBar.vue";
 
 <!--  <KeepAlive2 />-->
 
-  <NavBar />
-  <RouterView class="view" />
+<!--  <NavBar />-->
+<!--  <RouterView class="view" />-->
 
+  <LHeader />
+  <RouterView />
 
 </template>
