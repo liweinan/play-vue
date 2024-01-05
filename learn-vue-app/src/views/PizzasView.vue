@@ -4,7 +4,11 @@
      <input v-model="search" placeholder="Search for a pizza" />
     <ul>
       <li v-for="pizza in searchResults" :key="pizza.id">
-        <PizzaCard :pizza="pizza" />
+        <transition name="slidein">
+          <ul class="pizza-list" v-show="showList">
+            <PizzaCard :pizza="pizza" />
+          </ul>
+        </transition>
       </li>
     </ul>
   </div>
@@ -16,7 +20,7 @@ import {
 import PizzaCard from "@/components/PizzaCard.vue";
 import { useSearch } from "@/composables/useSearch";
 import type { Pizza } from "@/types/Pizza";
-import { watch, onBeforeMount, type Ref } from "vue";
+import { watch, ref, onBeforeMount, type Ref } from "vue";
 import { usePizzasStore } from "@/stores/pizzas";
 import { storeToRefs } from "pinia";
 
@@ -44,6 +48,12 @@ const { search, searchResults }: PizzaSearch = useSearch({
   defaultSearch: props.searchTerm,
 });
 
+const showList = ref(false);
+
+setTimeout(() => {
+  showList.value = true;
+}, 1000);
+
 watch(search, (value, prevValue) => {
   if (value === prevValue) return;
   router.replace({ query: { search: value } });
@@ -70,4 +80,26 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+.slidein-enter-to {
+  transform: translateX(0);
+}
+
+.slidein-enter-from {
+  transform: translateX(-100%);
+}
+
+.slidein-leave-to {
+  transform: translateX(100%);
+}
+
+.slidein-leave-from {
+  transform: translateX(0);
+}
+
+.slidein-enter-active,
+.slidein-leave-active {
+  transition: transform 0.5s;
+}
+
 </style>
