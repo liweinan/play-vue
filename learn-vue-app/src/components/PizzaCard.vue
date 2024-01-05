@@ -55,8 +55,19 @@ img {
   width: 100%;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+
 .pizza--add {
   margin-bottom: 5px;
   cursor: pointer;
+  animation: pulse 2s infinite;
+  box-shadow: 0px 0px 1px 1px #0000001a;
 }
 </style>
