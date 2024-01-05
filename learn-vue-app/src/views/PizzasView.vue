@@ -99,7 +99,7 @@ ul {
 
 .slidein-enter-active,
 .slidein-leave-active {
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 
 </style>
