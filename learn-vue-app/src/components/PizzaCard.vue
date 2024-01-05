@@ -65,6 +65,14 @@ img {
 }
 
 .pizza--add {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.pizza--add:hover {
+  background-color: #ff0000;
+}
+
+.pizza--add {
   margin-bottom: 5px;
   cursor: pointer;
   animation: pulse 2s infinite;
