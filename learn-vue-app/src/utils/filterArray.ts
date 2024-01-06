@@ -5,6 +5,9 @@ export function filterArray(
     key: string,
     term: string
 ): ArrayObject[] {
-    // code to filter the array
-    return [];
+    const filterTerm = term.toLowerCase();
+
+    return array.filter(
+        (item) => item[key].toLowerCase().includes(filterTerm)
+    );
 }

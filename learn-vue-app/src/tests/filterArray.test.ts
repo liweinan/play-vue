@@ -22,14 +22,6 @@ const pizzas = [
         quantity: 1,
     },
     {
-        id: "4",
-        title: "Hawaiian Pizza",
-        price: "11.00",
-        description:
-            "A delicious combination of ham, pineapple, and pineapple.",
-        quantity: 5,
-    },
-    {
         id: "5",
         title: "Meat Lovers Pizza",
         price: "13.00",
@@ -41,6 +33,27 @@ const pizzas = [
 ]
 
 
-it('should return a filtered array', () => {
-    expect(filterArray(pizzas, 'title', 'Hawaiian')).toEqual(result)
+// it('should return a filtered array', () => {
+//     expect(filterArray(pizzas, 'title', 'Hawaiian')).toEqual(result)
+// })
+//
+// it("should return a empty array when key doesn't exist", () => {
+//     expect(filterArray(pizzas, 'name', 'Hawaiian')).toEqual([])
+// })
+//
+// it('should return matching array when term is upper-cased', () => {
+//     expect(filterArray(pizzas, 'name', 'HAWAIIAN')).toEqual(result)
+// })
+
+describe('filterArray', () => {
+    it('should return a filtered array', () => {
+        expect(filterArray(pizzas, 'title', 'Hawaiian')).toEqual(result)
+    })
+    it(`should return a empty array when key doesn't exist`, () => {
+        expect(filterArray(pizzas, 'name', 'Hawaiian')).toEqual([])
+    })
+
+    it('should return matching array when term is upper-cased', () => {
+        expect(filterArray(pizzas, 'name', 'HAWAIIAN')).toEqual(result)
+    })
 })
