@@ -21,5 +21,13 @@ export default defineConfig({
     environment: 'jsdom',
     root: 'src/tests',
     globals: true,
+    coverage: {
+      all: false,
+      enabled: true,
+      generateOnFailure: true,
+      cleanOnRerun: true,
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'html'],
+    }
   }
 })

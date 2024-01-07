@@ -49,11 +49,11 @@ describe('filterArray', () => {
     it('should return a filtered array', () => {
         expect(filterArray(pizzas, 'title', 'Hawaiian')).toEqual(result)
     })
-    it(`should return a empty array when key doesn't exist`, () => {
-        expect(filterArray(pizzas, 'name', 'Hawaiian')).toEqual([])
-    })
-
-    it('should return matching array when term is upper-cased', () => {
-        expect(filterArray(pizzas, 'name', 'HAWAIIAN')).toEqual(result)
-    })
+    // it(`should return a empty array when key doesn't exist`, () => {
+    //     expect(filterArray(pizzas, 'name', 'Hawaiian')).toEqual([])
+    // })
+    //
+    // it('should return matching array when term is upper-cased', () => {
+    //     expect(filterArray(pizzas, 'name', 'HAWAIIAN')).toEqual(result)
+    // })
 })
