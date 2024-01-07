@@ -40,7 +40,7 @@ const pizzas = [
 // it("should return a empty array when key doesn't exist", () => {
 //     expect(filterArray(pizzas, 'name', 'Hawaiian')).toEqual([])
 // })
-//
+
 // it('should return matching array when term is upper-cased', () => {
 //     expect(filterArray(pizzas, 'name', 'HAWAIIAN')).toEqual(result)
 // })
