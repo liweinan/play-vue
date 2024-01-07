@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+learn-vue-app/src/coverage/
 learn-vue-app/src/tests/coverage/
 
 # local env files

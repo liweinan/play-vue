@@ -23,7 +23,7 @@ export default defineConfig({
   },
   test: {
     environment: 'jsdom',
-    root: 'src/tests',
+    root: 'src/',
     globals: true,
     coverage: {
       all: false,
