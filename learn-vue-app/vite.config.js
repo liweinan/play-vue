@@ -27,7 +27,7 @@ export default defineConfig({
     globals: true,
     coverage: {
       all: false,
-      enabled: true,
+      enabled: true, // Must enable
       generateOnFailure: true,
       cleanOnRerun: true,
       provider: 'istanbul',
