@@ -14,10 +14,11 @@ test.describe('Pizzas View', () => {
         await page.close();
     });
 
-    // test('should search for a pizza', async ({ page }) => {
-    //     const searchInput = await page.locator('[data-testid="search-input"]');
-    //     await searchInput.fill('Hawaiian');
-    //     expect(await page.isVisible('[data-testid*="Hawaiian"]')).toBeTruthy();
-    // });
+    test('should search for a pizza', async ({ page }) => {
+        const searchInput = await page.locator('[data-testid="search-input"]');
+        await searchInput.fill('Hawaiian');
+        // await searchInput.fill('Cheese');
+        expect(await page.isVisible('[data-testid*="Hawaiian"]')).toBeTruthy();
+    });
 
 });

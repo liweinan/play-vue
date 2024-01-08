@@ -108,17 +108,17 @@
 <template>
   <div class="pizzas-view--container">
     <h1>Pizzas</h1>
-    <input v-model="search" placeholder="Search for a pizza" />
+    <input v-model="search" placeholder="Search for a pizza" data-testid="search-input" />
     <ul>
       <li v-for="pizza in searchResults" :key="pizza.id">
-        <PizzaCard :pizza="pizza" />
+        <PizzaCardForTest :pizza="pizza" />
       </li>
     </ul>
   </div>
 </template>
 <script lang="ts" setup>
 import { usePizzas } from "@/composables/usePizzas";
-import PizzaCard from "@/components/PizzaCard.vue";
+import PizzaCardForTest from "@/components/PizzaCardForTest.vue";
 import { useSearch } from "@/composables/useSearch";
 
 const { pizzas } = usePizzas();
