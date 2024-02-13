@@ -12,6 +12,7 @@
 import {defineComponent} from 'vue'
 
 // https://vuejs.org/guide/scaling-up/tooling.html#note-on-in-browser-template-compilation
+// https://github.com/liweinan/play-vue/commit/7907120a98c8b8321c76c8e7102b99bc5c1831bf
 export const StepTwo = {
   template: `
     <div>
