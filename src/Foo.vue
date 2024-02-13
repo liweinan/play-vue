@@ -12,7 +12,6 @@
   </p>
   <p>
     <StepOne/>
-    <!--    <component :is="StepOne"></component>-->
   </p>
 </template>
 <script lang="ts">
@@ -20,11 +19,6 @@ import StepOne from "@/StepOne.vue";
 
 export default {
   name: 'Foo',
-  // computed: {
-  // StepOne() {
-  //   return StepOne
-  // }
-  // },
   data() {
     return {
       message: '',

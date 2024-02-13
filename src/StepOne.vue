@@ -5,7 +5,6 @@
   </div>
   <p>
     <StepTwo/>
-    <!--    <component :is="StepTwo"/>-->
   </p>
 </template>
 
@@ -33,11 +32,6 @@ export default defineComponent({
       name: 'Hello StepOne!'
     }
   },
-  // computed: {
-  //   StepTwo() {
-  //     return StepTwo
-  //   }
-  // },
   components: {StepTwo}
 })
 </script>
