@@ -23,9 +23,6 @@ console.log('computed : ' + JSON.stringify(Computed));
   <header>
     <div class="wrapper">
       <div>
-        <HelloWorld msg="You did it!"/>
-      </div>
-      <div>
         <Foo @toggle-favorite="receiveEmit" @add="add"/>
       </div>
       <div>
