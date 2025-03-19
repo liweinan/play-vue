@@ -22,23 +22,36 @@ console.log('computed : ' + JSON.stringify(Computed));
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <Foo @toggle-favorite="receiveEmit" @add="add"/>
-      <Comp/>
-      <Watcher/>
-      <Computed/>
-      <Setup/>
-      <!--      https://learning.oreilly.com/videos/complete-vue-js-3/9781803245287/9781803245287-video3_7/?t=0-->
-      <UseSlot>
-        <template v-slot:val-slot>
-          Hello Slot!!!
-        </template>
-      </UseSlot>
+      <div>
+        <HelloWorld msg="You did it!"/>
+      </div>
+      <div>
+        <Foo @toggle-favorite="receiveEmit" @add="add"/>
+      </div>
+      <div>
+        <Comp/>
+      </div>
+      <div>
+        <Watcher/>
+      </div>
+      <div>
+        <Computed/>
+      </div>
+      <div>
+        <Setup/>
+      </div>
+      <div>
+        <!--      https://learning.oreilly.com/videos/complete-vue-js-3/9781803245287/9781803245287-video3_7/?t=0-->
+        <UseSlot>
+          <template v-slot:val-slot>
+            Hello Slot!!!
+          </template>
+        </UseSlot>
+      </div>
     </div>
   </header>
 
-<!--  <RouterView />-->
+  <!--  <RouterView />-->
 </template>
 
 <style scoped>
@@ -50,6 +63,11 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+div {
+  padding: 10px;
+  border: indianred 1px solid;
 }
 
 nav {
