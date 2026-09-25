@@ -2,6 +2,7 @@
   <h2 class="heading">Foo</h2>
   <h2 class="heading">I am {{ reverseMessage(message) }}</h2>
   <p><input v-model="message" type="text" placeholder="Enter your message"/></p>
+  <p>{{ greetings }}</p>
   <p>
     <button @click="$emit('add', $event, Math.random())">
       Add Math.random()
@@ -12,7 +13,6 @@
   </p>
   <p>
     <StepOne/>
-    <!--    <component :is="StepOne"></component>-->
   </p>
 </template>
 <script lang="ts">
@@ -20,14 +20,10 @@ import StepOne from "@/StepOne.vue";
 
 export default {
   name: 'Foo',
-  // computed: {
-  // StepOne() {
-  //   return StepOne
-  // }
-  // },
   data() {
     return {
       message: '',
+      greetings: "Hello World!",
     };
   },
   components: {StepOne},
